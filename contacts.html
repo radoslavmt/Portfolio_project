@@ -35,7 +35,7 @@
         </nav>
         <div class="content">
                 <section id="section1">
-                    <img id="mainImg" src="images/adress.png" alt="">
+                    <div id="map"></div>
                 </section>
     
                 <section id="section2">
@@ -55,7 +55,10 @@
     <footer id="main-footer">
         <a href="#">PVC Solutions &copy; 2018</a>
     </footer>
-    <script src=""></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZuMcd6jnWezvxWRFTCenYfuqtsuGYVLE&callback=initMap">
+    </script>
+    <script src="scripts/api.js"></script>
 </body>
 
 </html>

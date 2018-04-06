@@ -23,3 +23,4 @@ right.addEventListener('click', function() {
         mainImg.src = "images/slider.jpg";
     }
 }, false);
+
