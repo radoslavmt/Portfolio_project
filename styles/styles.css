@@ -1,0 +1,202 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#shop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 2.5em;
+    width: auto;
+    background: white;
+    opacity: 0.5;
+    border-radius: 10px 0 0 10px;
+    z-index: 3;
+}
+
+#shop:hover {
+    box-shadow: -1px 1px 8px;
+    opacity: 1;
+}
+
+#shop img {
+    width: 40px;
+    padding: 0 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 1em;
+    margin-bottom: 2em;
+    margin-top: 3em;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-column: 1/2;
+    position: fixed;
+    height: 100%;
+}
+
+header {
+    animation: slideDown 2s linear;
+}
+
+header img {
+    margin-top: 1em;
+    width: 15vw;
+}
+
+#left {
+    border-radius: 100%;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    margin: 20vw;
+    margin-left: 1vw;
+    z-index: 4;
+    opacity: 0.5;
+}
+
+#left:hover {
+    background: #c2c2c2;
+    opacity: 0.5;
+}
+
+#right {
+    border-radius: 100%;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    margin-top: 20vw;
+    right: 1vw;
+    z-index: 4;
+    opacity: 0.5;
+}
+
+#right:hover {
+    background: #dadada;
+    opacity: 0.5;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    padding: 0 2em;
+}
+
+nav ul {
+    display: grid;
+    justify-content: center;
+    list-style-type: none;
+    height: 20em;
+    margin-top: 3em;
+    animation: slideRight 1s ease-out;
+}
+
+nav li a {
+    text-decoration: none;
+    background: linear-gradient(#73b3dd , #268fc0);
+    padding: 0.5em;
+    border-radius: 10px;
+    color: white;
+}
+
+nav li a:hover {
+    background: linear-gradient(#268fc0 , #73b3dd);
+}
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    grid-gap: 1em;
+    grid-column: 2/3;
+}
+
+#mainImg {
+    width: 100%;
+    opacity: 0.8;
+    box-shadow: 0 2px 8px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.wrap {
+    grid-template-columns: 2fr 1fr;
+}
+
+.wrapper img {
+    width: 20vw;
+    opacity: 0.8;
+}
+
+.wrapper p {
+    padding-top: 3vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 1px 1px;
+}
+
+#main-footer {
+    text-align: center;
+    margin-top: 1em;
+    width: 100%;
+    bottom: 0;
+    background: #161616;
+    padding: 1em 0;
+}
+
+#main-footer a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+@keyframes show {
+    0% { opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.7; }
+    100% { opacity: 0; }
+}
+
+@keyframes slideDown {
+    0% {position: relative; top: -20vw; }
+    80% {position: relative; top: 0vw; }
+    90% {position: relative; top: -0.5vw; }
+    100% {position: relative; top: 0vw; }
+}
+
+@keyframes slideRight {
+    0% {position: relative; left: -10vw; }
+    100% {position: relative; left: 0vw; }
+}
+
+@media(max-width:800px) {
+    
+    .content {
+        grid-row: 1/2;
+        grid-column: 2/4;
+    }
+
+    #section1 {
+        background-size: 80vw;
+    }
+
+    .wrapper p {
+        padding-top: 0;
+    }
+
+    .wrapper img {
+        width: 26vw;
+    }
+}
